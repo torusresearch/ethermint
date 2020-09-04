@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net"
 	"os"
 	"path/filepath"
@@ -47,6 +48,7 @@ var (
 	flagNodeDaemonHome    = "node-daemon-home"
 	flagNodeCLIHome       = "node-cli-home"
 	flagStartingIPAddress = "starting-ip-address"
+	flagNodeIPAddresses   = "node-ip-addresses"
 	flagKeyAlgo           = "algo"
 )
 
@@ -56,6 +58,8 @@ const nodeDirPerm = 0755
 func TestnetCmd(ctx *server.Context, cdc *codec.Codec,
 	mbm module.BasicManager, genAccIterator authtypes.GenesisAccountIterator,
 ) *cobra.Command {
+	var nodeIPAddresses []string
+
 	cmd := &cobra.Command{
 		Use:   "testnet",
 		Short: "Initialize files for a Ethermint testnet",
@@ -79,9 +83,24 @@ Note, strict routability for addresses is turned off in the config file.`,
 			numValidators, _ := cmd.Flags().GetInt(flagNumValidators)
 			algo, _ := cmd.Flags().GetString(flagKeyAlgo)
 
+			// Initialize the IP addresses
+			var ips []string
+			if startingIPAddress != "" {
+				for i := 0; i < numValidators; i++ {
+					ip, err := getIP(i, startingIPAddress)
+					if err != nil {
+						_ = os.RemoveAll(outputDir)
+						log.Fatal(err)
+					}
+					ips = append(ips, ip)
+				}
+			} else {
+				ips = nodeIPAddresses
+			}
+
 			return InitTestnet(
 				cmd, config, cdc, mbm, genAccIterator, outputDir, chainID, minGasPrices,
-				nodeDirPrefix, nodeDaemonHome, nodeCLIHome, startingIPAddress, keyringBackend, algo, numValidators,
+				nodeDirPrefix, nodeDaemonHome, nodeCLIHome, ips, keyringBackend, algo, numValidators,
 			)
 		},
 	}
@@ -91,11 +110,12 @@ Note, strict routability for addresses is turned off in the config file.`,
 	cmd.Flags().String(flagNodeDirPrefix, "node", "Prefix the directory name for each node with (node results in node0, node1, ...)")
 	cmd.Flags().String(flagNodeDaemonHome, "ethermintd", "Home directory of the node's daemon configuration")
 	cmd.Flags().String(flagNodeCLIHome, "ethermintcli", "Home directory of the node's cli configuration")
-	cmd.Flags().String(flagStartingIPAddress, "192.168.0.1", "Starting IP address (192.168.0.1 results in persistent peers list ID0@192.168.0.1:46656, ID1@192.168.0.2:46656, ...)")
+	cmd.Flags().String(flagStartingIPAddress, "", "Starting IP address (192.168.0.1 results in persistent peers list ID0@192.168.0.1:46656, ID1@192.168.0.2:46656, ...)")
 	cmd.Flags().String(flags.FlagChainID, "", "genesis file chain-id, if left blank will be randomly created")
 	cmd.Flags().String(server.FlagMinGasPrices, fmt.Sprintf("0.000006%s", types.DenomDefault), "Minimum gas prices to accept for transactions; All fees in a tx must meet this minimum (e.g. 0.01photon,0.001stake)")
 	cmd.Flags().String(flags.FlagKeyringBackend, flags.DefaultKeyringBackend, "Select keyring's backend (os|file|test)")
 	cmd.Flags().String(flagKeyAlgo, string(crypto.EthSecp256k1), "Key signing algorithm to generate keys for")
+	cmd.Flags().StringSliceVar(&nodeIPAddresses,flagNodeIPAddresses,[]string{},"IP Addresses of the testnet nodes")
 	return cmd
 }
 
@@ -111,8 +131,8 @@ func InitTestnet(
 	minGasPrices,
 	nodeDirPrefix,
 	nodeDaemonHome,
-	nodeCLIHome,
-	startingIPAddress,
+	nodeCLIHome string,
+	nodeIPAddresses []string,
 	keyringBackend,
 	algo string,
 	numValidators int,
@@ -131,6 +151,7 @@ func InitTestnet(
 	var (
 		genAccounts []authexported.GenesisAccount
 		genFiles    []string
+		err error
 	)
 
 	inBuf := bufio.NewReader(cmd.InOrStdin())
@@ -156,11 +177,7 @@ func InitTestnet(
 
 		config.Moniker = nodeDirName
 
-		ip, err := getIP(i, startingIPAddress)
-		if err != nil {
-			_ = os.RemoveAll(outputDir)
-			return err
-		}
+		ip := nodeIPAddresses[i]
 
 		nodeIDs[i], valPubKeys[i], err = genutil.InitializeNodeValidatorFiles(config)
 		if err != nil {
@@ -205,8 +222,8 @@ func InitTestnet(
 			return err
 		}
 
-		accTokens := sdk.TokensFromConsensusPower(1000)
-		accStakingTokens := sdk.TokensFromConsensusPower(5000)
+		accTokens := sdk.TokensFromConsensusPower(1000000000000000000)
+		accStakingTokens := sdk.TokensFromConsensusPower(1000000000000000000)
 		coins := sdk.NewCoins(
 			sdk.NewCoin(sdk.DefaultBondDenom, accTokens),
 			sdk.NewCoin(types.DenomDefault, accStakingTokens),
@@ -217,11 +234,11 @@ func InitTestnet(
 			CodeHash:    ethcrypto.Keccak256(nil),
 		})
 
-		valTokens := sdk.TokensFromConsensusPower(100)
+		valTokens := sdk.TokensFromConsensusPower(100000000)
 		msg := stakingtypes.NewMsgCreateValidator(
 			sdk.ValAddress(addr),
 			valPubKeys[i],
-			sdk.NewCoin(types.DenomDefault, valTokens),
+			sdk.NewCoin(sdk.DefaultBondDenom, valTokens),
 			stakingtypes.NewDescription(nodeDirName, "", "", "", ""),
 			stakingtypes.NewCommissionRates(sdk.OneDec(), sdk.OneDec(), sdk.OneDec()),
 			sdk.OneInt(),
@@ -255,7 +272,7 @@ func InitTestnet(
 		return err
 	}
 
-	err := collectGenFiles(
+	err = collectGenFiles(
 		cdc, config, chainID, nodeIDs, valPubKeys, numValidators,
 		outputDir, nodeDirPrefix, nodeDaemonHome, genAccIterator,
 	)
