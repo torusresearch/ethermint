@@ -6,7 +6,7 @@ import (
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
 )
 
 // Storage represents the account Storage map as a slice of single key value

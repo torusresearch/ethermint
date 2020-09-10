@@ -3,8 +3,8 @@ package evm
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	emint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm/types"
+	emint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 )

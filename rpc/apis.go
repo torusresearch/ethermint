@@ -4,8 +4,8 @@ package rpc
 
 import (
 	"github.com/cosmos/cosmos-sdk/client/context"
-	emintcrypto "github.com/cosmos/ethermint/crypto"
-	"github.com/ethereum/go-ethereum/rpc"
+	emintcrypto "github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/go-ethereum/rpc"
 )
 
 // RPC namespaces and API version

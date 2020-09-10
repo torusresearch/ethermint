@@ -9,9 +9,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/context"
@@ -22,8 +22,8 @@ import (
 	authclient "github.com/cosmos/cosmos-sdk/x/auth/client/utils"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	emint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm/types"
+	emint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 )
 
 // GetTxCmd defines the CLI commands regarding evm module transactions

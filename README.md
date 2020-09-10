@@ -14,7 +14,7 @@ parent:
   <a href="https://github.com/ChainSafe/ethermint/blob/development/LICENSE">
     <img alt="License: Apache-2.0" src="https://img.shields.io/github/license/ChainSafe/ethermint.svg" />
   </a>
-  <a href="https://pkg.go.dev/github.com/cosmos/ethermint?tab=doc">
+  <a href="https://pkg.go.dev/github.com/torusresearch/ethermint?tab=doc">
     <img alt="GoDoc" src="https://godoc.org/github.com/ChainSafe/ethermint?status.svg" />
   </a>
   <a href="https://goreportcard.com/report/github.com/ChainSafe/ethermint">
@@ -25,7 +25,7 @@ parent:
   </a>
 </div>
 <div align="center">
-  <a href="https://github.com/cosmos/ethermint">
+  <a href="https://github.com/torusresearch/ethermint">
     <img alt="Lines Of Code" src="https://tokei.rs/b1/github/cosmos/ethermint" />
   </a>
   <a href="https://discord.gg/AzefAFd">

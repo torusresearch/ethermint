@@ -16,12 +16,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	"github.com/cosmos/cosmos-sdk/x/params"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
-	"github.com/cosmos/ethermint/crypto"
-	ethermint "github.com/cosmos/ethermint/types"
+	"github.com/torusresearch/ethermint/crypto"
+	ethermint "github.com/torusresearch/ethermint/types"
 )
 
 type JournalTestSuite struct {

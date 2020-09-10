@@ -8,8 +8,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 
-	"github.com/cosmos/ethermint/crypto"
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/crypto"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 
 	tmcrypto "github.com/tendermint/tendermint/crypto"
 )

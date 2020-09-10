@@ -20,13 +20,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
 
-	"github.com/cosmos/ethermint/rpc"
-	"github.com/cosmos/ethermint/version"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/rpc"
+	"github.com/torusresearch/ethermint/version"
+	"github.com/torusresearch/ethermint/x/evm/types"
 )
 
 const (

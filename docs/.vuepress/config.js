@@ -32,7 +32,7 @@ module.exports = {
         {title: 'Specifications', children: [{title: 'Modules', directory: true, path: '/modules'}]}, {
           title: 'Resources',
           children: [
-            {title: 'Ethermint API Reference', path: 'https://godoc.org/github.com/cosmos/ethermint'},
+            {title: 'Ethermint API Reference', path: 'https://godoc.org/github.com/torusresearch/ethermint'},
             {title: 'Cosmos REST API Spec', path: 'https://cosmos.network/rpc/'},
             {title: 'Ethereum JSON RPC API Reference', path: 'https://eth.wiki/json-rpc/API'}
           ]

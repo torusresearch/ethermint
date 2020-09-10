@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/cosmos/ethermint/utils"
+	"github.com/torusresearch/ethermint/utils"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
 )
 
 // TxData implements the Ethereum transaction data structure. It is used

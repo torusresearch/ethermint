@@ -21,10 +21,10 @@ import (
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/rpc"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/eth/filters"
+	"github.com/torusresearch/go-ethereum/rpc"
 
 	context "github.com/cosmos/cosmos-sdk/client/context"
 )

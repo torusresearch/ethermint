@@ -3,7 +3,7 @@ package types
 import (
 	"testing"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
 	"github.com/stretchr/testify/require"
 )
 

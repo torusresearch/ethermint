@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth"
 	authclient "github.com/cosmos/cosmos-sdk/x/auth/client/utils"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 )
 
 // GetTxCmd return faucet sub-command for tx

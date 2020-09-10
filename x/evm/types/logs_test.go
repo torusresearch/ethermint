@@ -5,11 +5,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
-	"github.com/cosmos/ethermint/crypto"
+	"github.com/torusresearch/ethermint/crypto"
 )
 
 func TestTransactionLogsValidate(t *testing.T) {

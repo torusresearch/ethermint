@@ -5,12 +5,12 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/cosmos/ethermint/crypto"
-	ethermint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/crypto"
+	ethermint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 )
 
 func (suite *StateDBTestSuite) TestTransitionDb() {

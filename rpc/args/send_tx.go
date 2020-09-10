@@ -1,13 +1,13 @@
 package args
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
 )
 
 // SendTxArgs represents the arguments to submit a new transaction into the transaction pool.
 // Duplicate struct definition since geth struct is in internal package
-// Ref: https://github.com/ethereum/go-ethereum/blob/release/1.9/internal/ethapi/api.go#L1346
+// Ref: https://github.com/torusresearch/go-ethereum/blob/release/1.9/internal/ethapi/api.go#L1346
 type SendTxArgs struct {
 	From     common.Address  `json:"from"`
 	To       *common.Address `json:"to"`

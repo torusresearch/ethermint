@@ -1,8 +1,8 @@
 package evm
 
 import (
-	"github.com/cosmos/ethermint/x/evm/keeper"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/x/evm/keeper"
+	"github.com/torusresearch/ethermint/x/evm/types"
 )
 
 // nolint

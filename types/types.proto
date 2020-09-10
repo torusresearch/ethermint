@@ -4,7 +4,7 @@ package ethermint.v1;
 import "third_party/proto/gogoproto/gogo.proto";
 import "third_party/proto/cosmos-sdk/x/auth/types/types.proto";
 
-option go_package = "github.com/cosmos/ethermint/types";
+option go_package = "github.com/torusresearch/ethermint/types";
 
 
 // EthAccount implements the auth.Account interface and embeds an

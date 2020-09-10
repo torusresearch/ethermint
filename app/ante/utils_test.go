@@ -11,13 +11,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 
-	"github.com/cosmos/ethermint/app"
-	ante "github.com/cosmos/ethermint/app/ante"
-	"github.com/cosmos/ethermint/crypto"
-	emint "github.com/cosmos/ethermint/types"
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/app"
+	ante "github.com/torusresearch/ethermint/app/ante"
+	"github.com/torusresearch/ethermint/crypto"
+	emint "github.com/torusresearch/ethermint/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmcrypto "github.com/tendermint/tendermint/crypto"

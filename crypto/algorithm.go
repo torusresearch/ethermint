@@ -10,7 +10,7 @@ import (
 
 	"github.com/tyler-smith/go-bip39"
 
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
 	tmcrypto "github.com/tendermint/tendermint/crypto"
 

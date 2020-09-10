@@ -5,11 +5,11 @@ package core
 import (
 	"math/big"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethcons "github.com/ethereum/go-ethereum/consensus"
-	ethstate "github.com/ethereum/go-ethereum/core/state"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethrpc "github.com/ethereum/go-ethereum/rpc"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethcons "github.com/torusresearch/go-ethereum/consensus"
+	ethstate "github.com/torusresearch/go-ethereum/core/state"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethrpc "github.com/torusresearch/go-ethereum/rpc"
 )
 
 // ChainContext implements Ethereum's core.ChainContext and consensus.Engine

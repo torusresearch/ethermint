@@ -12,18 +12,18 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/ethereum/go-ethereum/common"
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	"github.com/torusresearch/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/crypto"
-	"github.com/cosmos/ethermint/x/evm"
-	"github.com/cosmos/ethermint/x/evm/keeper"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/app"
+	"github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/ethermint/x/evm"
+	"github.com/torusresearch/ethermint/x/evm/keeper"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto/secp256k1"

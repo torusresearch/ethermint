@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
 )
 
 // Supported endpoints

@@ -4,11 +4,11 @@ import (
 	"crypto/ecdsa"
 	"math/big"
 
-	"github.com/cosmos/ethermint/crypto"
-	"github.com/cosmos/ethermint/x/evm"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/ethermint/x/evm"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common"
 )
 
 func (suite *EvmTestSuite) TestExportImport() {

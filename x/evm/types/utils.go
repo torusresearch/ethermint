@@ -5,16 +5,16 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/cosmos/ethermint/crypto"
+	"github.com/torusresearch/ethermint/crypto"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/rlp"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
+	"github.com/torusresearch/go-ethereum/rlp"
 
 	"github.com/pkg/errors"
 	"golang.org/x/crypto/sha3"

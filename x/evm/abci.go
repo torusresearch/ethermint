@@ -7,7 +7,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
 )
 
 // BeginBlock sets the block hash -> block height map and resets the Bloom filter and

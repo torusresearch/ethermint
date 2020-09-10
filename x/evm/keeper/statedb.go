@@ -3,14 +3,14 @@ package keeper
 import (
 	"math/big"
 
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethstate "github.com/ethereum/go-ethereum/core/state"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethvm "github.com/ethereum/go-ethereum/core/vm"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethstate "github.com/torusresearch/go-ethereum/core/state"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethvm "github.com/torusresearch/go-ethereum/core/vm"
 )
 
 // ----------------------------------------------------------------------------

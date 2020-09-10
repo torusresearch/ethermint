@@ -1,10 +1,10 @@
 package rpc
 
 import (
-	"github.com/cosmos/ethermint/version"
+	"github.com/torusresearch/ethermint/version"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
+	"github.com/torusresearch/go-ethereum/crypto"
 )
 
 // PublicWeb3API is the web3_ prefixed set of APIs in the Web3 JSON-RPC spec.

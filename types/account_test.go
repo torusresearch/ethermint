@@ -12,7 +12,7 @@ import (
 	tmamino "github.com/tendermint/tendermint/crypto/encoding/amino"
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 
-	emintcrypto "github.com/cosmos/ethermint/crypto"
+	emintcrypto "github.com/torusresearch/ethermint/crypto"
 )
 
 func init() {

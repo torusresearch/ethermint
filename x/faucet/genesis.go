@@ -3,7 +3,7 @@ package faucet
 import (
 	"fmt"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 

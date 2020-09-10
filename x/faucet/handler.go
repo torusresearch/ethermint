@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 )
 
 // NewHandler returns a handler for faucet messages.

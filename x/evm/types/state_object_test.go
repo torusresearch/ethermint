@@ -3,7 +3,7 @@ package types_test
 import (
 	"math/big"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
 )
 
 func (suite *StateDBTestSuite) TestStateObject_State() {

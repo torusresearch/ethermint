@@ -13,9 +13,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/cosmos/ethermint/x/evm/client/cli"
-	"github.com/cosmos/ethermint/x/evm/keeper"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/x/evm/client/cli"
+	"github.com/torusresearch/ethermint/x/evm/keeper"
+	"github.com/torusresearch/ethermint/x/evm/types"
 )
 
 var _ module.AppModuleBasic = AppModuleBasic{}

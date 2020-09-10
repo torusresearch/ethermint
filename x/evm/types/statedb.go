@@ -9,13 +9,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	emint "github.com/cosmos/ethermint/types"
+	emint "github.com/torusresearch/ethermint/types"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethstate "github.com/ethereum/go-ethereum/core/state"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethvm "github.com/ethereum/go-ethereum/core/vm"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethstate "github.com/torusresearch/go-ethereum/core/state"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethvm "github.com/torusresearch/go-ethereum/core/vm"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 )
 
 var (
@@ -700,7 +700,7 @@ func (csdb *CommitStateDB) Copy() *CommitStateDB {
 		// stateObjects: OOG after touch on ripeMD prior to Byzantium. Thus, we
 		// need to check for nil.
 		//
-		// Ref: https://github.com/ethereum/go-ethereum/pull/16485#issuecomment-380438527
+		// Ref: https://github.com/torusresearch/go-ethereum/pull/16485#issuecomment-380438527
 		if idx, exist := csdb.addressToObjectIndex[dirty.address]; exist {
 			state.stateObjects[idx] = stateEntry{
 				address:     dirty.address,

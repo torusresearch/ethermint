@@ -23,19 +23,19 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/bank"
 	"github.com/cosmos/cosmos-sdk/x/params"
 
-	"github.com/cosmos/ethermint/core"
-	emintcrypto "github.com/cosmos/ethermint/crypto"
-	"github.com/cosmos/ethermint/types"
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/core"
+	emintcrypto "github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/ethermint/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus/ethash"
-	ethcore "github.com/ethereum/go-ethereum/core"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethvm "github.com/ethereum/go-ethereum/core/vm"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	ethparams "github.com/ethereum/go-ethereum/params"
-	ethrlp "github.com/ethereum/go-ethereum/rlp"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/consensus/ethash"
+	ethcore "github.com/torusresearch/go-ethereum/core"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethvm "github.com/torusresearch/go-ethereum/core/vm"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
+	ethparams "github.com/torusresearch/go-ethereum/params"
+	ethrlp "github.com/torusresearch/go-ethereum/rlp"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmlog "github.com/tendermint/tendermint/libs/log"
@@ -317,7 +317,7 @@ func accumulateRewards(
 // contract.
 // Code is pulled from go-ethereum 1.9 because the StateDB interface does not include the
 // SetBalance function implementation
-// Ref: https://github.com/ethereum/go-ethereum/blob/52f2461774bcb8cdd310f86b4bc501df5b783852/consensus/misc/dao.go#L74
+// Ref: https://github.com/torusresearch/go-ethereum/blob/52f2461774bcb8cdd310f86b4bc501df5b783852/consensus/misc/dao.go#L74
 func applyDAOHardFork(statedb *evmtypes.CommitStateDB) {
 	// Retrieve the contract to refund balances into
 	if !statedb.Exist(ethparams.DAORefundContract) {
@@ -336,7 +336,7 @@ func applyDAOHardFork(statedb *evmtypes.CommitStateDB) {
 // for the transaction, gas used and an error if the transaction failed,
 // indicating the block was invalid.
 // Function is also pulled from go-ethereum 1.9 because of the incompatible usage
-// Ref: https://github.com/ethereum/go-ethereum/blob/52f2461774bcb8cdd310f86b4bc501df5b783852/core/state_processor.go#L88
+// Ref: https://github.com/torusresearch/go-ethereum/blob/52f2461774bcb8cdd310f86b4bc501df5b783852/core/state_processor.go#L88
 func applyTransaction(
 	config *ethparams.ChainConfig, bc ethcore.ChainContext, author *ethcmn.Address,
 	gp *ethcore.GasPool, statedb *evmtypes.CommitStateDB, header *ethtypes.Header,

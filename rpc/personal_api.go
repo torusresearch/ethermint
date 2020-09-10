@@ -13,14 +13,14 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/crypto/keys"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	emintcrypto "github.com/cosmos/ethermint/crypto"
-	params "github.com/cosmos/ethermint/rpc/args"
+	emintcrypto "github.com/torusresearch/ethermint/crypto"
+	params "github.com/torusresearch/ethermint/rpc/args"
 	"github.com/spf13/viper"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/torusresearch/go-ethereum/accounts"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
+	"github.com/torusresearch/go-ethereum/crypto"
 )
 
 // PersonalEthAPI is the eth_ prefixed set of APIs in the Web3 JSON-RPC spec.
@@ -185,7 +185,7 @@ func (e *PersonalEthAPI) SendTransaction(ctx context.Context, args params.SendTx
 //
 // The key used to calculate the signature is decrypted with the given password.
 //
-// https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_sign
+// https://github.com/torusresearch/go-ethereum/wiki/Management-APIs#personal_sign
 func (e *PersonalEthAPI) Sign(ctx context.Context, data hexutil.Bytes, addr common.Address, passwd string) (hexutil.Bytes, error) {
 	key, ok := checkKeyInKeyring(e.keys, addr)
 	if !ok {
@@ -210,7 +210,7 @@ func (e *PersonalEthAPI) Sign(ctx context.Context, data hexutil.Bytes, addr comm
 // Note, the signature must conform to the secp256k1 curve R, S and V values, where
 // the V value must be 27 or 28 for legacy reasons.
 //
-// https://github.com/ethereum/go-ethereum/wiki/Management-APIs#personal_ecRecove
+// https://github.com/torusresearch/go-ethereum/wiki/Management-APIs#personal_ecRecove
 func (e *PersonalEthAPI) EcRecover(ctx context.Context, data, sig hexutil.Bytes) (common.Address, error) {
 	if len(sig) != crypto.SignatureLength {
 		return common.Address{}, fmt.Errorf("signature must be %d bytes long", crypto.SignatureLength)

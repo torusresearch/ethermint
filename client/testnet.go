@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 	"github.com/spf13/cobra"
 	tmconfig "github.com/tendermint/tendermint/config"
 	tmcrypto "github.com/tendermint/tendermint/crypto"
@@ -36,8 +36,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/mint"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/cosmos/ethermint/crypto"
-	"github.com/cosmos/ethermint/types"
+	"github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/ethermint/types"
 )
 
 var (

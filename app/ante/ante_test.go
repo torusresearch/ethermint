@@ -7,17 +7,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmcrypto "github.com/tendermint/tendermint/crypto"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/app/ante"
-	"github.com/cosmos/ethermint/types"
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/app"
+	"github.com/torusresearch/ethermint/app/ante"
+	"github.com/torusresearch/ethermint/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 )
 
 func requireValidTx(

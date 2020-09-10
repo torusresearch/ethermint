@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
 )
 
 // BlockNumber represents decoding hex string to block values

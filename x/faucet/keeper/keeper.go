@@ -11,7 +11,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	supplyexported "github.com/cosmos/cosmos-sdk/x/supply/exported"
 
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 )
 
 // Keeper defines the faucet Keeper.

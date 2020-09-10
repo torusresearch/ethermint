@@ -10,14 +10,14 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/crypto"
-	ethermint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/app"
+	"github.com/torusresearch/ethermint/crypto"
+	ethermint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 )

@@ -11,11 +11,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/cosmos/cosmos-sdk/x/bank"
 
-	emint "github.com/cosmos/ethermint/types"
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	emint "github.com/torusresearch/ethermint/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 
-	"github.com/ethereum/go-ethereum/common"
-	ethcore "github.com/ethereum/go-ethereum/core"
+	"github.com/torusresearch/go-ethereum/common"
+	ethcore "github.com/torusresearch/go-ethereum/core"
 )
 
 // EthSetupContextDecorator sets the infinite GasMeter in the Context and wraps

@@ -27,11 +27,11 @@ import (
 	genutiltypes "github.com/cosmos/cosmos-sdk/x/genutil/types"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/client"
-	"github.com/cosmos/ethermint/codec"
-	"github.com/cosmos/ethermint/crypto"
-	ethermint "github.com/cosmos/ethermint/types"
+	"github.com/torusresearch/ethermint/app"
+	"github.com/torusresearch/ethermint/client"
+	"github.com/torusresearch/ethermint/codec"
+	"github.com/torusresearch/ethermint/crypto"
+	ethermint "github.com/torusresearch/ethermint/types"
 )
 
 const flagInvCheckPeriod = "inv-check-period"

@@ -9,13 +9,13 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 
 	"github.com/cosmos/cosmos-sdk/client/context"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
 )
 
 // Backend implements the functionality needed to filter changes.

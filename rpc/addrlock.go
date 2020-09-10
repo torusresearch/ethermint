@@ -3,7 +3,7 @@ package rpc
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common"
 )
 
 // AddrLocker is a mutex structure used to avoid querying outdated account data

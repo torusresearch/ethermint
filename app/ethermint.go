@@ -26,11 +26,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/upgrade"
 	upgradeclient "github.com/cosmos/cosmos-sdk/x/upgrade/client"
 
-	"github.com/cosmos/ethermint/app/ante"
-	ethermintcodec "github.com/cosmos/ethermint/codec"
-	ethermint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm"
-	"github.com/cosmos/ethermint/x/faucet"
+	"github.com/torusresearch/ethermint/app/ante"
+	ethermintcodec "github.com/torusresearch/ethermint/codec"
+	ethermint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm"
+	"github.com/torusresearch/ethermint/x/faucet"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"

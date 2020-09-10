@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

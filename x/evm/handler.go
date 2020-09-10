@@ -3,10 +3,10 @@ package evm
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common"
 
-	emint "github.com/cosmos/ethermint/types"
-	"github.com/cosmos/ethermint/x/evm/types"
+	emint "github.com/torusresearch/ethermint/types"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"

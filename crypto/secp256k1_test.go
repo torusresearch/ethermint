@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	ethsecp256k1 "github.com/ethereum/go-ethereum/crypto/secp256k1"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
+	ethsecp256k1 "github.com/torusresearch/go-ethereum/crypto/secp256k1"
 
 	tmcrypto "github.com/tendermint/tendermint/crypto"
 )

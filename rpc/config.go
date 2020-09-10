@@ -18,9 +18,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authrest "github.com/cosmos/cosmos-sdk/x/auth/client/rest"
 
-	"github.com/cosmos/ethermint/app"
-	"github.com/cosmos/ethermint/crypto"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/torusresearch/ethermint/app"
+	"github.com/torusresearch/ethermint/crypto"
+	"github.com/torusresearch/go-ethereum/rpc"
 )
 
 const (

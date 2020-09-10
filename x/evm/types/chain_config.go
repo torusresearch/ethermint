@@ -3,8 +3,8 @@ package types
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/params"
 )
 
 // GenerateChainConfig returns an Ethereum chainconfig for EVM state transitions

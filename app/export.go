@@ -14,7 +14,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	"github.com/cosmos/cosmos-sdk/x/staking/exported"
 
-	ethcdc "github.com/cosmos/ethermint/codec"
+	ethcdc "github.com/torusresearch/ethermint/codec"
 )
 
 // NewDefaultGenesisState generates the default state for the application.

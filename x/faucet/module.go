@@ -14,9 +14,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/cosmos/ethermint/x/faucet/client/cli"
-	"github.com/cosmos/ethermint/x/faucet/client/rest"
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/client/cli"
+	"github.com/torusresearch/ethermint/x/faucet/client/rest"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 )
 
 // type check to ensure the interface is properly implemented

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/bloombits"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/filters"
+	"github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/core/bloombits"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	"github.com/torusresearch/go-ethereum/eth/filters"
 )
 
 // Filter can be used to retrieve and filter logs.

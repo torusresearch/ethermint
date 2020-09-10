@@ -9,12 +9,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/cosmos/ethermint/utils"
-	"github.com/cosmos/ethermint/version"
-	"github.com/cosmos/ethermint/x/evm/types"
+	"github.com/torusresearch/ethermint/utils"
+	"github.com/torusresearch/ethermint/version"
+	"github.com/torusresearch/ethermint/x/evm/types"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	"github.com/torusresearch/go-ethereum/common/hexutil"
 
 	abci "github.com/tendermint/tendermint/abci/types"
 )

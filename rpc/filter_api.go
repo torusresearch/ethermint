@@ -9,14 +9,14 @@ import (
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/ethereum/go-ethereum/common"
-	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/filters"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/torusresearch/go-ethereum/common"
+	ethtypes "github.com/torusresearch/go-ethereum/core/types"
+	"github.com/torusresearch/go-ethereum/eth/filters"
+	"github.com/torusresearch/go-ethereum/rpc"
 
 	clientcontext "github.com/cosmos/cosmos-sdk/client/context"
 
-	evmtypes "github.com/cosmos/ethermint/x/evm/types"
+	evmtypes "github.com/torusresearch/ethermint/x/evm/types"
 )
 
 // FiltersBackend defines the methods requided by the PublicFilterAPI backend

@@ -13,8 +13,8 @@ import (
 
 	tmamino "github.com/tendermint/tendermint/crypto/encoding/amino"
 
-	ethcmn "github.com/ethereum/go-ethereum/common"
-	ethcrypto "github.com/ethereum/go-ethereum/crypto"
+	ethcmn "github.com/torusresearch/go-ethereum/common"
+	ethcrypto "github.com/torusresearch/go-ethereum/crypto"
 )
 
 var _ exported.Account = (*EthAccount)(nil)

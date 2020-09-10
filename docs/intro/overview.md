@@ -28,7 +28,7 @@ Ethermint enables these key features through:
 
 * Implementing Tendermint Core's ABCI application interface to manage the blockchain
 * Leveraging [modules](https://github.com/cosmos/cosmos-sdk/tree/master/x/) and other mechanisms implemented by the Cosmos SDK
-* Utilizing [`geth`](https://github.com/ethereum/go-ethereum) as a library to avoid code reuse and improve maintainability.
+* Utilizing [`geth`](https://github.com/torusresearch/go-ethereum) as a library to avoid code reuse and improve maintainability.
 * Exposing a fully compatible Web3 RPC layer for interacting with existing Ethereum clients and tooling (Metamask, Remix, Truffle, etc).
 
 The sum of these features allows developers to leverage existing Ethereum ecosystem tooling and

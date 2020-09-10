@@ -1,8 +1,8 @@
 package faucet
 
 import (
-	"github.com/cosmos/ethermint/x/faucet/keeper"
-	"github.com/cosmos/ethermint/x/faucet/types"
+	"github.com/torusresearch/ethermint/x/faucet/keeper"
+	"github.com/torusresearch/ethermint/x/faucet/types"
 )
 
 const (
