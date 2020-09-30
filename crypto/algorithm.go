@@ -1,12 +1,11 @@
 package crypto
 
 import (
+	"crypto/hmac"
+	"crypto/sha512"
 	"fmt"
 
 	"github.com/pkg/errors"
-
-	"crypto/hmac"
-	"crypto/sha512"
 
 	"github.com/tyler-smith/go-bip39"
 
@@ -18,8 +17,10 @@ import (
 )
 
 const (
+	// EthSecp256k1Type string constant for the EthSecp256k1 algorithm
+	EthSecp256k1Type = "eth_secp256k1"
 	// EthSecp256k1 defines the ECDSA secp256k1 used on Ethereum
-	EthSecp256k1 = keys.SigningAlgo("eth_secp256k1")
+	EthSecp256k1 = keys.SigningAlgo(EthSecp256k1Type)
 )
 
 // SupportedAlgorithms defines the list of signing algorithms used on Ethermint:
@@ -58,7 +59,8 @@ func EthermintKeygenFunc(bz []byte, algo keys.SigningAlgo) (tmcrypto.PrivKey, er
 	return PrivKeySecp256k1(bz), nil
 }
 
-func DeriveSecp256k1(mnemonic, bip39Passphrase, _ string) ([]byte, error) {
+// DeriveSecp256k1 derives and returns the eth_secp256k1 private key for the given mnemonic and HD path.
+func DeriveSecp256k1(mnemonic, bip39Passphrase, path string) ([]byte, error) {
 	seed, err := bip39.NewSeedWithErrorChecking(mnemonic, bip39Passphrase)
 	if err != nil {
 		return nil, err

@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/torusresearch/ethermint/crypto"
 	"github.com/stretchr/testify/require"
+	"github.com/torusresearch/ethermint/crypto"
 
 	ethcmn "github.com/torusresearch/go-ethereum/common"
 	ethtypes "github.com/torusresearch/go-ethereum/core/types"
@@ -122,8 +122,15 @@ func TestValidateGenesis(t *testing.T) {
 						},
 					},
 				},
+				ChainConfig: DefaultChainConfig(),
+				Params:      DefaultParams(),
 			},
 			expPass: true,
+		},
+		{
+			name:     "empty genesis",
+			genState: GenesisState{},
+			expPass:  false,
 		},
 		{
 			name: "invalid genesis",
@@ -224,6 +231,22 @@ func TestValidateGenesis(t *testing.T) {
 					},
 				},
 				TxsLogs: []TransactionLogs{NewTransactionLogs(ethcmn.Hash{}, nil)},
+			},
+			expPass: false,
+		},
+		{
+			name: "invalid params",
+			genState: GenesisState{
+				ChainConfig: DefaultChainConfig(),
+				Params:      Params{},
+			},
+			expPass: false,
+		},
+		{
+			name: "invalid chain config",
+			genState: GenesisState{
+				ChainConfig: ChainConfig{},
+				Params:      DefaultParams(),
 			},
 			expPass: false,
 		},
